@@ -11,6 +11,7 @@
 /*--------------PAGE COLORS----------------*/
 :root {
     --letter-green:#588157;
+    --background-body: #eeeeee;
 }
 
 
@@ -19,11 +20,11 @@
 
 @keyframes slide-in-title {
     from {
-        left: 150%;
+        right: -200px;
         opacity: 0;
     }
     to {
-        left: 93%;
+        right: -115px;
         opacity: 1;
     }
 }
@@ -53,6 +54,11 @@
 
 /*--------------HTML----------------*/
 
+body {
+    overflow-x: hidden;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -71,6 +77,45 @@ img {
     width: 100%;
     object-fit: cover;
 }
+
+
+/* Alert example
+.alert {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-card {
+    position: relative;
+    min-width: 400px;
+    min-height: 200px;
+   background-color: white;
+   z-index: 2;
+}
+
+.alert-shadow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+}
+*/
+
+
+
+
+
 
 
 
@@ -95,7 +140,7 @@ img {
     position: absolute;
     transform: translate(-50%, -50%) rotate(180deg);
     top: 55%;
-    left: 93%;
+    right: -115px;
     font-size: 13rem;
     color: var(--letter-green);
     writing-mode: vertical-rl;
@@ -111,7 +156,7 @@ img {
 /*--------------FOOTER----------------*/
 
 footer {
-    background-color: #eeeeee;
+    background-color: var(--background-body);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -140,6 +185,7 @@ footer a {
     
     
 }
+
 
 a::before {
     content: "";

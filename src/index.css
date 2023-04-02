@@ -1,0 +1,160 @@
+
+/*--------------GOOGLE FONTS----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;500;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+
+
+
+/*--------------PAGE COLORS----------------*/
+:root {
+    --letter-green:#588157;
+}
+
+
+
+/*--------------KEYFRAMES----------------*/
+
+@keyframes slide-in-title {
+    from {
+        left: 150%;
+        opacity: 0;
+    }
+    to {
+        left: 93%;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-slogan {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 112px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-footer {
+    from {
+      opacity: 0;
+      transform: translateY(-150%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+  
+
+/*--------------HTML----------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+main {
+    height: calc(100vh - 80px);
+}
+
+
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.span-slogan {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 112px;
+    left: 317px;
+    line-height: .95;
+    font-size: 6rem;
+    color: var(--letter-green);
+    animation: slide-in-slogan 1s ease-in-out forwards;
+}
+
+
+
+.span-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(180deg);
+    top: 55%;
+    left: 93%;
+    font-size: 13rem;
+    color: var(--letter-green);
+    writing-mode: vertical-rl;
+    text-align: center;
+    animation-name: slide-in-title;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+/*--------------FOOTER----------------*/
+
+footer {
+    background-color: #eeeeee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.footer-a {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+footer a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: black;
+    animation: slide-in-footer 1s ease-in-out forwards;
+    
+    
+    
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+
+}
+
+
+  
+a:hover::before {
+    width: 100%;
+}

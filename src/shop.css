@@ -1,0 +1,311 @@
+
+/*--------------GOOGLE FONTS----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;500;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+
+
+
+/*--------------PAGE COLORS----------------*/
+:root {
+    --letter-green:#588157;
+    --background-body: #eeeeee;
+    --letter-categories: #939393;
+    --backgroun-categories: #344e41;
+}
+
+
+
+/*--------------KEYFRAMES----------------*/
+
+
+
+@keyframes slide-in-add-product-button {
+    from {
+        left: -30px;
+    } 
+    to {
+        left: 60px;
+        
+    }
+}
+
+
+@keyframes slide-out-add-product-button {
+    from {
+        left: 60px;
+    }
+    to {
+        left: -30px;
+    }
+}
+
+
+
+
+/*--------------HTML----------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: var(--background-body);
+    
+}
+
+
+
+/*--------------HEADER----------------*/
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+
+
+.nav-title {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    
+}
+
+
+
+.nav-title a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--letter-green);
+}
+
+
+.nav-link {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+
+
+#active-nav {
+    font-weight: 500;
+
+}
+
+
+
+.nav-link a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.nav-link a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+
+}
+
+
+  
+.nav-link a:hover::before {
+    width: 100%;
+}
+
+
+
+/*--------------MAIN----------------*/  
+
+
+
+
+/*--------------PRODUCTS CATEGORIES----------------*/ 
+
+
+
+.products-categories {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    gap: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.products-categories span {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.products-categories span:hover {
+    color: var(--letter-categories);
+}
+
+
+
+
+/*--------------PRODUCT CARD----------------*/ 
+
+
+
+.container-products {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 10px;
+   
+
+}
+
+
+
+.product-card{
+    position: relative;
+    height: 640px;
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+
+
+.add-product {
+    position: absolute;
+    top: 413px;
+    left: -30px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+.add-product-button {
+    font-size: 0.8rem;
+}
+
+
+
+.product-card:hover .add-product{
+    animation: slide-in-add-product-button 0.2s ease-in-out forwards;
+}
+
+
+
+.product-card:not(:hover) .add-product {
+    animation: slide-out-add-product-button 0.2s ease-in-out forwards;
+}
+
+
+
+.product-image {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+img {
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+}
+
+
+
+img:hover  {
+    transform: scale(1.1);
+}
+
+
+
+.text-wrapper {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+
+
+.text-wrapper-title  {
+    font-size: 1rem;
+}
+
+
+
+.text-wrapper-categories {
+    display: flex;
+    font-size: 0.7rem;
+    gap: 15px;
+}
+
+
+
+.text-wrapper-categories span {
+    background-color: #344e41;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+
+
+.text-wrapper-price {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+/*--------------------------------------------*/ 

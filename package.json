@@ -1,0 +1,12 @@
+{
+  "name": "thirdsystem_exer",
+  "version": "1.0.0",
+  "description": "Using Typescript to create a more complex ecommerce web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "tsc --watch "
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,237 @@
+/*--------------GOOGLE FONTS----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;500;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+
+
+
+/*--------------PAGE COLORS----------------*/
+:root {
+    --letter-green:#588157;
+    --background-body: #eeeeee;
+    --letter-categories: #939393;
+    --backgroun-categories: #344e41;
+}
+
+
+/*--------------HTML----------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: var(--background-body);
+    
+}
+
+
+
+/*--------------HEADER----------------*/
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+}
+
+
+
+.nav-title {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    
+}
+
+
+
+.nav-title a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--letter-green);
+}
+
+
+.nav-link {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+
+
+#active-nav {
+    font-weight: 500;
+
+}
+
+
+
+.nav-link a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.nav-link a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+
+}
+
+
+  
+.nav-link a:hover::before {
+    width: 100%;
+}
+
+
+
+/*--------------MAIN----------------*/  
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-furniture-container {
+    margin-top: 50px;
+    width: 80vw;
+    height: 70vh;
+    border-radius: 15px;
+    border: 2px solid var(--letter-green);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.container-title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    
+    
+}
+
+#container-form-input {
+    width: 100%;
+    height: 90%;
+    display: flex;
+   
+
+}
+
+.input-text {
+    width: 50%;
+    height: 90%;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-evenly
+}
+
+.input-text-title {
+    margin-left: 30px;
+}
+
+.title-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+}
+
+.input-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #333;
+  font-size: 1rem;
+	margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 80%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.input-title:placeholder-shown + .title-label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+}
+
+.input-button {
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 30px ;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-button button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid var(--letter-green);
+    color: #333;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-button button:hover {
+    color: var(--backgroun-categories);
+    font-weight: 700;
+    border: none;
+}
+
+
+.input-img {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+}
+

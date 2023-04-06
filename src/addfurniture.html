@@ -8,6 +8,7 @@
     <title>add furniture.</title>
   </head>
   <body>
+    <div class="animation"></div>
     <header>
       <div class="nav-title">
         <a href="index.html">furnie.</a>
@@ -28,7 +29,7 @@
           <div class="input-text">
             <div class="input-text-title">
               <input
-                id="title"
+                id="input-title"
                 type="text"
                 class="input-title"
                 placeholder="Add Title."
@@ -38,7 +39,7 @@
             </div>
             <div class="input-text-title">
               <input
-                id="title"
+                id="input-category"
                 type="text"
                 class="input-title"
                 placeholder="Add Category."
@@ -48,7 +49,7 @@
             </div>
             <div class="input-text-title">
               <input
-                id="title"
+                id="input-price"
                 type="text"
                 class="input-title"
                 placeholder="Add Price."
@@ -57,25 +58,29 @@
               <label for="title" class="title-label">Add Price.</label>
             </div>
             <div class="input-button">
-              <button class="add-button" type="button">Add Furniture.</button>
-              <button class="clear-button" type="reset">Clear Form.</button>
+              <button class="add-button" type="button" onclick="addProduct()">Add Furniture.</button>
+              <button class="clear-button" type="reset" onclick="clearForm()">Clear Form.</button>
             </div>
           </div>
           <div class="input-img">
-            <div class="select-img"></div>
-            <select>
+            <div class="select-img">
+              <select id="input-select" onchange="previewImage(this)">
                 <option value="0">Select an image:</option>
-                <option value="1">Leibal - Nova Chair 1</option>
-                <option value="2">Leibal - Nova Chair 2</option>
-                <option value="3">Leibal - Nova Chair 3</option>
-                <option value="4">Leibal - Nova Chair 4</option>
-            </select>
-            <div class="preview-img"></div>
+                <option value="/assets/products/1.jpg">Leibal - Nova Chair 1</option>
+                <option value="/assets/products/2.jpg">Leibal - Nova Chair 2</option>
+                <option value="/assets/products/3.jpg">Leibal - Nova Chair 3</option>
+                <option value="/assets/products/4.jpg">Leibal - Nova Chair 4</option>
+              </select>
+            </div>
+            <div class="preview-img">
+              <img id="selected-image" src="" alt="">
+            </div>
             </div>
           </div>
         </form>
       </div>
     </main>
-    <main></main>
+    <script src="/dist/addfurniture.js"></script>
   </body>
+  
 </html>

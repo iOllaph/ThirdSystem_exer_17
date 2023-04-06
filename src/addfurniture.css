@@ -8,12 +8,32 @@
 
 
 /*--------------PAGE COLORS----------------*/
+
+
 :root {
     --letter-green:#588157;
     --background-body: #eeeeee;
     --letter-categories: #939393;
-    --backgroun-categories: #344e41;
+    --background-categories: #344e41;
 }
+
+
+
+/*--------------KEYFRAMES----------------*/
+
+@keyframes transitionIn {
+    from {
+        opacity: 0 ;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
 
 
 /*--------------HTML----------------*/
@@ -28,6 +48,7 @@
 
 body {
     background-color: var(--background-body);
+    animation:  transitionIn 2s;
     
 }
 
@@ -114,20 +135,29 @@ header {
 
 /*--------------MAIN----------------*/  
 
+
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+
+/*--------------ADD FURNITURE----------------*/  
+
+
 .add-furniture-container {
     margin-top: 50px;
     width: 80vw;
     height: 70vh;
-    border-radius: 15px;
     border: 2px solid var(--letter-green);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(255,255,255,1);
+    box-shadow: 10px 10px 0px 0px rgba(255,255,255,1);
 }
 
 .container-title {
@@ -150,6 +180,12 @@ main {
 
 }
 
+
+
+/*--------------INPUT TEXT----------------*/  
+
+
+
 .input-text {
     width: 50%;
     height: 90%;
@@ -160,14 +196,18 @@ main {
     justify-content: space-evenly
 }
 
+
+
 .input-text-title {
     margin-left: 30px;
 }
 
+
+
 .title-label {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
@@ -175,21 +215,25 @@ main {
     transform: translateY(0rem);
 }
 
+
+
 .input-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #333;
-  font-size: 1rem;
+    font-size: 1rem;
 	margin: 0 auto;
-  padding: 1rem 2rem;
-  border-radius: 0.2rem;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  width: 80%;
-  display: block;
-  border-bottom: 0.3rem solid transparent;
-  transition: all 0.3s;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 80%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
 }
+
+
 
 .input-title:placeholder-shown + .title-label {
     opacity: 0;
@@ -198,6 +242,8 @@ main {
     transform: translateY(-4rem);
 }
 
+
+
 .input-button {
     margin-top: 10px;
     width: 100%;
@@ -205,6 +251,8 @@ main {
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 .input-button button {
     font-family: 'Montserrat', sans-serif;
@@ -219,6 +267,8 @@ main {
     cursor: pointer;
 }
 
+
+
 .input-button button:hover {
     color: var(--backgroun-categories);
     font-weight: 700;
@@ -226,12 +276,60 @@ main {
 }
 
 
+
+/*--------------INPUT IMG---------------*/  
+
+
+
 .input-img {
     width: 50%;
     height: 90%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-evenly;
     padding: 15px 15px;
 }
 
+
+
+.select-img{
+    width: 100%;
+    height: 10%;
+    position: a;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+select-selected {
+   display: none;
+   background-color: var(--letter-green);
+}
+
+
+
+.preview-img {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.preview-img img {
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: 5px 5px 0px 0px var(--letter-green);
+-moz-box-shadow: 5px 5px 0px 0px var(--letter-green);
+box-shadow: 5px 5px 0px 0px var(--letter-green);
+}

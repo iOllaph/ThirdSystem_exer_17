@@ -9,18 +9,30 @@
 
 
 /*--------------PAGE COLORS----------------*/
+
+
 :root {
     --letter-green:#588157;
     --background-body: #eeeeee;
     --letter-categories: #939393;
-    --backgroun-categories: #344e41;
+    --background-categories: #344e41;
 }
 
 
 
 /*--------------KEYFRAMES----------------*/
 
+@keyframes transitionIn {
+    from {
+        opacity: 0 ;
+        transform: rotateX(-10deg);
+    }
 
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
 
 @keyframes slide-in-add-product-button {
     from {
@@ -44,8 +56,8 @@
 
 
 
-
 /*--------------HTML----------------*/
+
 
 
 * {
@@ -57,8 +69,9 @@
 
 body {
     background-color: var(--background-body);
-    
+    animation:  transitionIn 2s;
 }
+
 
 
 
@@ -236,6 +249,7 @@ header {
 .product-card:not(:hover) .add-product {
     animation: slide-out-add-product-button 0.2s ease-in-out forwards;
 }
+
 
 
 

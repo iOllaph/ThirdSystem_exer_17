@@ -3,7 +3,7 @@ class Product {
     name: string;
     category: string;
     price: number;
-    image: string;
+    image: string;  
 
 
 
@@ -30,6 +30,7 @@ let addedProducts: Product[] = [];
 
 
 checkselect();
+
 
 
 
@@ -80,7 +81,7 @@ function previewImage(select: HTMLSelectElement) {
 
 function addProduct() { 
 
-
+   
 
     /* 
         The regular expression /^[a-zA-Z]+$/ matches any string that contains only uppercase or lowercase letters. 
@@ -89,7 +90,7 @@ function addProduct() {
     
     */
 
-    if (!inputTitle.value || !/^[a-zA-Z]+$/.test(inputTitle.value)) {
+    if (!inputTitle.value || !/^[a-zA-Z-""]+$/.test(inputTitle.value)) {
 
         alert("Please enter a valid title (letters only)!");
         return;
@@ -145,7 +146,9 @@ function addProduct() {
 
 }
 
-
+function clearForm() {
+    formContainer.reset();
+}
 
 
 
